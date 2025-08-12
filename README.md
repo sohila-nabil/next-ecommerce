@@ -4,7 +4,7 @@ A modern full-stack **Next.js 15** application for browsing products, adding to 
 
 ---
 ## Vercel Deploy
-
+next-ecommerce-rose-zeta.vercel.app
 
 ## 📌 Overview
 
@@ -99,24 +99,18 @@ npm install
 
 # Run development server
 npm run dev
-▶️ Usage
+
+## ▶️ Usage
 1- User Flow
 
-Visit the homepage to browse products.
-
-Click on a product to view its details.
-
-Add product to cart, check total, and proceed to checkout.
-
-Place an order.
+- Visit the homepage to browse products.
+- Click on a product to view its details.
+- Add product to cart, check total, and proceed to checkout.
+- Place an order.
 
 2- Seller Flow
-
-Sign in and click "Seller Dashboard" in the navbar.
-
-Create a new product.
-
-View and manage listed products.
-
-See orders made for your products.
+- Sign in and click "Seller Dashboard" in the navbar.
+- Create a new product.
+- View and manage listed products.
+- See orders made for your products.
 
