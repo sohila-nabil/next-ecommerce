@@ -1,36 +1,122 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛍️ E-Commerce App (Next.js 15 + MongoDB)
 
-## Getting Started
+A modern full-stack **Next.js 15** application for browsing products, adding to cart, placing orders, and managing products as a seller — with secure authentication via **Clerk** and background workflows using **Inngest**.
 
-First, run the development server:
+---
+## Vercel Deploy
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+## 📌 Overview
+
+This application allows users to:
+- Browse products with detailed product pages.
+- Add items to their cart and view a running total.
+- Place orders securely.
+- Sign in or sign up using **Clerk** authentication.
+- Sellers can create, manage, and list their products.
+- Sellers can view orders for their products via a dedicated dashboard.
+- Inngest is used for background jobs (e.g., order processing, notifications).
+
+---
+
+## 🚀 Features
+
+### 🛒 Website (User)
+- View all products with search and filtering.
+- Product detail page with images, price, and description.
+- Add products to cart.
+- Automatic total calculation in cart.
+- Checkout and place orders.
+- Clerk authentication for secure sign-in/sign-up.
+
+### 📊 Seller Dashboard
+- Accessed via **"Seller Dashboard"** button in the navbar.
+- Create new products with images, price, and description.
+- View a list of seller’s own products.
+- View orders for seller’s products.
+
+### ⚙️ Additional
+- MongoDB for fast and scalable product, user, and order storage.
+- Inngest for background processing tasks.
+- Responsive UI for desktop and mobile.
+
+---
+
+## 🧰 Tech Stack
+
+- **Frontend:** Next.js 15, React, Tailwind CSS
+- **Backend:** Next.js API routes
+- **Auth:** Clerk
+- **Database:** MongoDB + Mongoose
+- **Background Jobs:** Inngest
+- **State Management:** React hooks / Context API
+- **Styling:** Tailwind CSS
+
+---
+
+## 📂 Project Structure
+
+ecommerce-app/
+│
+├── app/ # Next.js 15 App Router pages
+├── components/ # Reusable UI components
+├── lib/ # Database, Clerk, and Inngest setup
+├── models/ # Mongoose models
+├── public/ # Static assets
+└── styles/ # Global styles
+
+
+
+---
+
+## ⚙️ Environment Variables
+
+Create a `.env.local` file in the project root:
+
+```env
+# Public Environment Variables
+NEXT_PUBLIC_CURRENCY=$
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+
+# Private Environment Variables
+CLERK_SECRET_KEY=
+MONGODB_URI=''
+INNGEST_SIGNING_KEY=''
+INNGEST_EVENT_KEY=''
+# Cloudinary
+CLOUDINARY_CLOUD_NAME =''
+CLOUDINARY_API_KEY =''
+CLOUDINARY_API_SECRET =''
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+##  📦 Installation
+# Clone repository
+git clone https://github.com/yourusername/ecommerce-app.git
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+# Install dependencies
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Run development server
+npm run dev
+▶️ Usage
+1- User Flow
 
-## Learn More
+Visit the homepage to browse products.
 
-To learn more about Next.js, take a look at the following resources:
+Click on a product to view its details.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Add product to cart, check total, and proceed to checkout.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Place an order.
 
-## Deploy on Vercel
+2- Seller Flow
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Sign in and click "Seller Dashboard" in the navbar.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Create a new product.
+
+View and manage listed products.
+
+See orders made for your products.
+
