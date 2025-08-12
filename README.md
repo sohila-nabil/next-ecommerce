@@ -92,7 +92,7 @@ CLOUDINARY_API_SECRET =''
 
 ##  📦 Installation
 # Clone repository
-git clone https://github.com/yourusername/ecommerce-app.git
+git clone https://github.com/sohila-nabil/next-ecommerce.git
 
 # Install dependencies
 npm install
