@@ -1,6 +1,7 @@
 import dbConnection from "@/config/dbConnection";
 import Order from "@/lib/models/orderModel";
 import Address from "@/lib/models/addressModel";
+import Product from "@/lib/models/productModel";
 import { currentUser } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 
