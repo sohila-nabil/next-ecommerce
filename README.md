@@ -3,8 +3,8 @@
 A modern full-stack **Next.js 15** application for browsing products, adding to cart, placing orders, and managing products as a seller — with secure authentication via **Clerk** and background workflows using **Inngest**.
 
 ---
-## Vercel Deploy
-next-ecommerce-rose-zeta.vercel.app
+## 🌐 Live Demo
+🔗 **[View the App on Vercel](https://next-ecommerce-rose-zeta.vercel.app)**
 
 ## 📌 Overview
 
