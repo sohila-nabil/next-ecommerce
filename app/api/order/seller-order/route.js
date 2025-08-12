@@ -3,21 +3,22 @@ import authSeller from "@/lib/authSeller";
 import Order from "@/lib/models/orderModel";
 import { currentUser } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
-
+import Address from "@/lib/models/addressModel";
+import Product from "@/lib/models/productModel";
 export const GET = async () => {
   try {
     const user = await currentUser();
     if (!user) {
       return NextResponse.json({ success: false, message: "UnAuterized" });
     }
-    const isSeller = await authSeller(user.id)
+    const isSeller = await authSeller(user.id);
     if (!isSeller) {
       return NextResponse.json({ success: false, message: "UnAuterized" });
     }
     await dbConnection();
     const orders = await Order.find({ userId: user.id }).populate([
-      "address",
-      "items.product",
+      { path: "address" },
+      { path: "items.product" },
     ]);
     if (orders.length < 0) {
       return NextResponse.json({
